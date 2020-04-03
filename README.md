@@ -1,3 +1,3 @@
-# lavendroid.github.io
+# deepictorial's portfolio
 
-navigate to my site => [here](https://lavendroid.github.io/)
+navigate to my site => [https://deepictorial.github.io/](https://deepictorial.github.io/)
