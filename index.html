@@ -5,10 +5,14 @@
     <link href="./style.css" rel="stylesheet"/>
     <title>Deepictorial</title>
   </head>
-  <body>
+  <body onclick="showCoords(event)">
     <div class="cursor"></div>
     <nav>
-      <h1 class="home-link"><a href="index.html">Hellow!</a></h1>
+      <h1 class="home-link">
+        <a href="index.html">
+          <img class="logo-img" src="DA.png"/>
+        </a>
+      </h1>
       <ul class="nav-links">
         <li><a href="about.html">About</a></li>
         <li><a href="projects.html">Projects</a></li>
@@ -17,7 +21,11 @@
     </nav>
     <div class="desc">
       <h2>Welcome, please make yourself comfortable.</h2>
+      <p>Go on... click something somewhere and see what happens!</p>
+      <p id="demo"></p>
+
     </div>
     <script src="./app.js"></script>
+    <script src="./game.js"></script>
   </body>
 </html>
