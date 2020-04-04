@@ -113,3 +113,11 @@ h2 {
   height: 100px;
   width: 100px;
 }
+
+p {
+  color: white;
+  height: 10em;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}

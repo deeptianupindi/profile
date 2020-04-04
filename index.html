@@ -5,7 +5,7 @@
     <link href="./style.css" rel="stylesheet"/>
     <title>Deepictorial</title>
   </head>
-  <body>
+  <body onclick="showCoords(event)">
     <div class="cursor"></div>
     <nav>
       <h1 class="home-link">
@@ -21,7 +21,11 @@
     </nav>
     <div class="desc">
       <h2>Welcome, please make yourself comfortable.</h2>
+      <p>Go on... click something somewhere and see what happens!</p>
+      <p id="demo"></p>
+
     </div>
     <script src="./app.js"></script>
+    <script src="./game.js"></script>
   </body>
 </html>
