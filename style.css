@@ -101,7 +101,8 @@ img {
 h2 {
   color: white;
   font-size: 16px;
-  margin-left: 30px;
+  display: flex;
+  justify-content: center;
 }
 
 .home-link a {
@@ -119,5 +120,16 @@ p {
   height: 10em;
   display: flex;
   align-items: center;
-  justify-content: center
+  justify-content: center;
+}
+
+@media only screen and (min-width: 600px) {
+  .logo-img {
+    height: 250px;
+    width: 250px;
+  }
+
+  .nav-links, h2, p {
+    font-size: xx-large;
+  }
 }
