@@ -3,6 +3,11 @@ body {
   margin: 0;
   height: 100vh;
   font-family: Poppins;
+  cursor: none;
+  background-image: url('paint.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .cursor {
@@ -11,9 +16,8 @@ body {
   border: 1px solid white;
   border-radius: 50%;
   position: absolute;
-  transition-duration: 200ms;
-  transition-timing-function: ease-out;
   animation: cursorAnim .5s infinite alternate;
+  pointer-events: none;
 }
 
 .cursor::after {
@@ -32,7 +36,6 @@ body {
 .expand {
   animation: cursorAnim3 .5s forwards;
   border: 1px solid red;
-
 }
 
 @keyframes cursorAnim {
@@ -69,10 +72,10 @@ body {
 nav {
   display: flex;
   justify-content: space-between;
-  width: 90%;
   min-height: 10vh;
   align-items: center;
   margin: auto;
+  background-color: rgba(6, 7, 8, 0.5);
 }
 
 .nav-links {
@@ -83,9 +86,25 @@ nav {
 .nav-links, h1 {
   flex: 1;
   color: white;
+  padding: 25px;
 }
 
 .nav-links a {
   color: inherit;
   text-decoration: none;
+}
+
+img {
+  width: -webkit-fill-available;
+}
+
+h2 {
+  color: white;
+  font-size: 16px;
+  margin-left: 30px;
+}
+
+.home-link a {
+  text-decoration: none;
+  color: white;
 }
