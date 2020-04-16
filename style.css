@@ -4,7 +4,7 @@ body {
   height: 100vh;
   font-family: Poppins;
   cursor: none;
-  background-image: url('paint.jpg');
+  background-image: url('images/paint.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -105,9 +105,19 @@ img {
 
 h2 {
   color: white;
-  font-size: 16px;
+  font-size: 20px;
   display: flex;
   justify-content: center;
+}
+
+.demo-container {
+  padding: 100px;
+}
+
+.demo-item {
+  width: 300px;
+  padding: 20px;
+  text-align: center;
 }
 
 .home-link a {
