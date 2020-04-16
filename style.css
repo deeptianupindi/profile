@@ -10,6 +10,11 @@ body {
   background-size: cover;
 }
 
+#map {
+  height: 80%;
+  width: 80%;
+}
+
 .cursor {
   width: 20px;
   height: 20px;
@@ -113,6 +118,19 @@ h2 {
 .logo-img {
   height: 100px;
   width: 100px;
+}
+
+.car-img {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  /*animation: mymove 10s;
+  animation-timing-function: linear;*/
+}
+
+@keyframes mymove {
+  from {left: 0px;}
+  to {left: 100%;}
 }
 
 p {

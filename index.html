@@ -5,7 +5,7 @@
     <link href="./style.css" rel="stylesheet"/>
     <title>Deepictorial</title>
   </head>
-  <body onclick="showCoords(event)">
+  <body>
     <div class="cursor"></div>
     <nav>
       <h1 class="home-link">
@@ -19,13 +19,16 @@
         <li><a href="connect.html">Connect</a></li>
       </ul>
     </nav>
-    <div class="desc">
-      <h2>Welcome, please make yourself comfortable.</h2>
-      <p>Click something or somewhere and see what happens!</p>
-      <p id="demo"></p>
-
+    <div class="mapBtn">
+      <button type="button" id="start">Start</button>
+    </div>
+    <div id="map">
     </div>
     <script src="./app.js"></script>
     <script src="./game.js"></script>
+    <script src="./map.js"></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5CbukQxioHBaWMHgxZMNkcsxA4jtoN44&callback=initMap">
+    </script>
   </body>
 </html>
