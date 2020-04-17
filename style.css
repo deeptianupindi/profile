@@ -111,7 +111,7 @@ h2 {
 }
 
 .demo-container {
-  padding-left: 100px;
+  padding: 0 100px 0 100px;
   background: rgba(239, 183, 12, 0.3);
 }
 
@@ -157,7 +157,16 @@ p {
     width: 250px;
   }
 
-  .nav-links, h2, p {
-    font-size: xx-large;
+  .nav-links, h2, h3 {
+    font-size: 40px;
   }
+
+  p {
+    font-size: 30px;
+  }
+
+  .demo-item {
+    width: 100%;
+  }
+
 }
