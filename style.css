@@ -157,7 +157,11 @@ p {
     width: 250px;
   }
 
-  .nav-links, h2, h3 {
+  .nav-links {
+    font-size: 32px;
+  }
+  
+  h2, h3 {
     font-size: 40px;
   }
 
