@@ -111,7 +111,8 @@ h2 {
 }
 
 .demo-container {
-  padding: 100px;
+  padding-left: 100px;
+  background: rgba(239, 183, 12, 0.3);
 }
 
 .demo-item {
@@ -144,8 +145,7 @@ h2 {
 }
 
 p {
-  color: white;
-  height: 10em;
+  color: black;
   display: flex;
   align-items: center;
   justify-content: center;
