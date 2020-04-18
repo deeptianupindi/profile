@@ -98,7 +98,7 @@ p {
 
 .mapgrid {
   width: 70%;
-  height: 70%;
+  height: 60%;
   margin: 10px auto;
 }
 
@@ -115,7 +115,7 @@ p {
 
 .msgboard {
   margin: 10px auto;
-  height: 25%;
+  height: 15%;
 }
 
 .plane-start {
@@ -124,20 +124,6 @@ p {
   animation-iteration-count: 1;
   animation-timing-function: ease;
   animation-fill-mode: forwards;
-}
-
-.chair-slider {
-  top: 100px;
-}
-
-.ship-slider {
-  top: 100px;
-  animation-delay: 4s;
-  opacity: 0;
-}
-
-.marg-start {
-  animation: circle 6s linear infinite;
 }
 
 #msg {
@@ -164,6 +150,7 @@ p {
   height: 100px;
   width: 100px;
   margin: 10px auto;
+  display: block;
   animation: marquee 5s linear forwards;
 }
 
@@ -171,6 +158,7 @@ p {
   height: 100px;
   width: 100px;
   margin: 10px auto;
+  display: block;
   animation: sail 5s linear forwards;
   opacity: 0;
 }
@@ -189,16 +177,211 @@ p {
   background-size: 30px 30px;
 }
 
-#mexdiv {
-  margin-top: 100px;
+#mex {
+  height: 70px;
+  width: 70px;
+  display: block;
+  margin: 10px auto;
+  animation: rotate 6s linear forwards;
 }
 
 #marg {
-  height: 100px;
+  height: 70px;
+  width: 70px;
+  margin: 10px auto;
+  display: block;
+  animation: sail 6s linear forwards;
+}
+
+#crowd {
+  height: 70px;
+  width: 70px;
+  margin: 10px auto;
+  display: block;
+  animation: slideinout 6s linear forwards;
+}
+
+#coffee {
+  height: 70px;
+  width: 70px;
+  margin: 10px auto;
+  display: block;
+  animation: slideinout 6s linear forwards;
+  animation-delay: 4s;
+  opacity: 0;
+}
+
+#theater {
+  height: 70px;
+  width: 70px;
+  margin: 100px auto;
+  display: block;
+  animation: diagonal 6s linear forwards;
+  animation-direction: reverse;
+}
+
+#gradhat {
+  display: block;
   width: 100px;
+  height: 100px;
+  margin-top: -200px;
+  margin-left: 75%;
+  animation: fallingLeaves 6s linear forwards;
+}
+
+#viking {
+  display: block;
+  width: 200px;
+  height: 100px;
+  margin-top: 200px;
+  animation: slideinout 6s linear forwards;
+  animation-direction: reverse;
+}
+
+#fish {
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin-top: -150px;
+  animation: rotate 10s linear forwards;
+}
+
+#fish1 {
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin-top: -50px;
+  animation-delay: 1s;
+  animation: slideinout 6s linear forwards;
+}
+
+#fish2 {
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin-top: 20px;
+  animation-delay: 2s;
+  animation: slideinout 4s linear forwards;
+  animation-direction: reverse;
+}
+
+#fish3 {
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin-top: 50px;
+  animation-delay: 3s;
+  animation: slideinout 2s linear forwards;
+}
+
+#octopus {
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin-bottom: : -200px;
+  margin-left: 25%;
+  animation: fallingLeaves 6s linear forwards;
+  animation-direction: reverse;
+}
+
+#bat {
+  display: block;
+  width: 200px;
+  height: 200px;
+  margin-top: -150px;
+  animation: swing 10s linear forwards;
+}
+
+#ball {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin-top: 150px;
+  animation: rolling 6s linear forwards;
+}
+
+#med {
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  margin-left: 50%;
+  animation: falling 3s linear forwards;
+}
+
+#hosp {
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin-left: 20%;
+  margin-bottom: -150px;
+  animation: falling 6s linear forwards;
+  animation-direction: reverse;
+}
+
+#book {
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+  margin-left: 70%;
+  animation: falling 5s linear forwards;
 }
 
 /*all keyframes are here*/
+@keyframes fallingLeaves {
+  0% {
+    opacity: 1;
+    transform: translate(0, 50px) rotateZ(0deg);
+  }
+  75% {
+    opacity: 1;
+    transform: translate(50px, 350px) rotateZ(270deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(100px, 1000px) rotateZ(360deg);
+  }
+}
+
+@keyframes slideinout {
+  0% { transform: translatex(-500px); opacity: 1 }
+  10% { transform: translatex(-100px) }
+  30% { transform: translatex(0px) }
+  50% { transform: translatex(10px) }
+  70% { transform: translatex(100px) }
+  90% { transform: translatex(500px) }
+  100% { transform: translatex(1000px) }
+}
+
+@keyframes falling {
+  0% { transform: translatey(-50px); opacity: 1 }
+  10% { transform: translatey(-10px) }
+  30% { transform: translatey(0px) }
+  50% { transform: translatey(10px) }
+  70% { transform: translatey(100px) }
+  90% { transform: translatey(500px) }
+  100% { transform: translatey(1000px) }
+}
+
+@keyframes rolling {
+  0% { transform: translatex(-500px) rotate(180deg); opacity: 1 }
+  10% { transform: translatex(-100px) rotate(-180deg)}
+  30% { transform: translatex(0px) rotate(180deg)}
+  50% { transform: translatex(10px) rotate(-180deg)}
+  70% { transform: translatex(100px) rotate(180deg)}
+  90% { transform: translatex(500px) rotate(-180deg)}
+  100% { transform: translatex(1000px) rotate(180deg)}
+}
+
+@keyframes swing {
+  0% { transform: translatex(-500px) ; opacity: 1 }
+  30% { transform: translatex(0px) scaleX(-1) }
+  50% { transform: translatex(10px) scaleX(-1)}
+  70% { transform: translatex(100px) scaleX(1) }
+  100% { transform: translatex(1000px) scaleX(-1) }
+}
+
 @keyframes circle {
     from { transform:rotate(0deg); }
     to { transform:rotate(360deg); }
@@ -218,7 +401,7 @@ p {
 }
 
 @keyframes sail {
-  0% {transform: translatex(0) rotate(0deg);opacity:1}
+  0% {transform: translate(20px, 50px) rotate(0deg);opacity:1}
   30% {transform: rotate(20deg);left:10px;opacity:1}
   50% {transform: rotate(0deg);left:60px;opacity:1}
   80% {transform: rotate(-20deg);left:100px;opacity:1}
@@ -236,6 +419,7 @@ p {
   50% { transform: translatex(500px); opacity: 1 }
   75% { transform: translatex(800px); opacity: 1 }
   100% { transform: translatex(1000px); opacity: 0 }
+}
 
 @keyframes cursorAnim3 {
   0% {
@@ -290,6 +474,10 @@ p {
   .mapgrid {
     width: 100%;
     height: 40%;
+  }
+
+  .msgboard {
+    height: 25%;
   }
 
 }
