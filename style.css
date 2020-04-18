@@ -21,7 +21,6 @@ body {
   border: 1px solid white;
   border-radius: 50%;
   position: absolute;
-  animation: cursorAnim .5s infinite alternate;
   pointer-events: none;
 }
 
@@ -35,7 +34,6 @@ body {
   opacity: .5;
   top: -8px;
   left: -8px;
-  animation: cursorAnim2 .5s infinite alternate;
 }
 
 .expand {
@@ -145,10 +143,17 @@ h2 {
 }
 
 p {
-  color: black;
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#canvas {
+   width: 80%;
+   text-align:center;
+   display: inline;
+   margin: 10px 160px 10px 160px;
 }
 
 @media only screen and (max-device-width: 736px) {
@@ -160,7 +165,7 @@ p {
   .nav-links {
     font-size: 32px;
   }
-  
+
   h2, h3 {
     font-size: 40px;
   }
