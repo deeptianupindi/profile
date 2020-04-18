@@ -21,8 +21,10 @@
     </nav>
     <div class="mapBtn">
       <button type="button" id="start">Take me outside!</button>
+      <p id="textDisplay"></p>
     </div>
-    <div id="map">
+    <canvas id="canvas" width="400" height="400" onclick="showCoords(event)">
+    </canvas>
     </div>
     <script src="../js/app.js"></script>
     <script src="../js/game.js"></script>
