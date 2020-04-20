@@ -10,7 +10,7 @@
     <nav>
       <h1 class="home-link">
         <a href="./index.html">
-          <img class="logo-img" src="../images/DA.png"/>
+          <img class="logo-img" src="images/DA.png"/>
         </a>
       </h1>
       <ul class="nav-links">
@@ -19,15 +19,23 @@
         <li><a href="html/connect.html">Connect</a></li>
       </ul>
     </nav>
-    <div class="mapBtn">
-      <button type="button" id="start">Take me outside!</button>
-      <p id="textDisplay"></p>
     </div>
-    <canvas id="canvas" width="400" height="400" onclick="showCoords(event)">
-    </canvas>
+    <div class="parentdiv">
+      <img id="fly" class="plane-hide" src="images/plane.png"></img>
+      <div class="mapgrid">
+        <input class="griditem" type="image" src="images/top-left.png"></input>
+        <input class="griditem" type="image" src="images/top-middle.png" onclick="activatePlane()"></input>
+        <input class="griditem" type="image" src="images/top-right.png"></input>
+        <input class="griditem" type="image" src="images/center-left.png"></input>
+        <input class="griditem" type="image" src="images/center-middle.png"></input>
+        <input class="griditem" type="image" src="images/center-right.png"></input>
+        <input class="griditem" type="image" src="images/bottom-left.png"></input>
+        <input class="griditem" type="image" src="images/bottom-middle.png"></input>
+        <input class="griditem" type="image" src="images/bottom-right.png"></input>
+      </div>
+      <div class="msgboard"></div>
     </div>
     <script src="../js/app.js"></script>
     <script src="../js/game.js"></script>
-    <script src="../js/map.js"></script>
   </body>
 </html>
