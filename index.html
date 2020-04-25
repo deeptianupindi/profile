@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&display=swap" />
     <link href="./style.css" rel="stylesheet"/>
     <title>Deepictorial</title>
   </head>
@@ -21,19 +20,22 @@
     </nav>
     </div>
     <div class="parentdiv">
-      <img id="fly" class="plane-hide" src="images/plane.png"></img>
       <div class="mapgrid">
-        <input class="griditem" type="image" src="images/top-left.png"></input>
-        <input class="griditem" type="image" src="images/top-middle.png" onclick="activatePlane()"></input>
-        <input class="griditem" type="image" src="images/top-right.png"></input>
-        <input class="griditem" type="image" src="images/center-left.png"></input>
-        <input class="griditem" type="image" src="images/center-middle.png"></input>
-        <input class="griditem" type="image" src="images/center-right.png"></input>
-        <input class="griditem" type="image" src="images/bottom-left.png"></input>
-        <input class="griditem" type="image" src="images/bottom-middle.png"></input>
-        <input class="griditem" type="image" src="images/bottom-right.png"></input>
+        <input class="griditem" type="image" src="images/map/top-left.png" onclick="activateBeach()"></input>
+        <input class="griditem" type="image" src="images/map/top-middle.png" onclick="activatePlane()"></input>
+        <input class="griditem" type="image" src="images/map/top-right.png" onclick="activateAsia()"></input>
+        <input class="griditem" type="image" src="images/map/center-left.png"></input>
+        <input class="griditem" type="image" src="images/map/center-middle.png"></input>
+        <input class="griditem" type="image" src="images/map/center-right.png"></input>
+        <input class="griditem" type="image" src="images/map/bottom-left.png"></input>
+        <input class="griditem" type="image" src="images/map/bottom-middle.png"></input>
+        <input class="griditem" type="image" src="images/map/bottom-right.png"></input>
       </div>
-      <div class="msgboard"></div>
+      <div class="msgboard">
+        <p id="msg">Click anywhere on the map to start</p>
+      </div>
+      <div class="animboard">
+      </div>
     </div>
     <script src="../js/app.js"></script>
     <script src="../js/game.js"></script>

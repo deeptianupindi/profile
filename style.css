@@ -2,12 +2,13 @@ body {
   background-color: black;
   margin: 0;
   height: 100vh;
-  font-family: Poppins;
+  font-family: fantasy;
   cursor: none;
   background-image: url('images/paint.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  overflow: hidden;
 }
 
 .cursor {
@@ -46,6 +47,7 @@ nav {
 }
 
 .nav-links {
+  font-size: 20px;
   display: flex;
   justify-content: space-between;
   list-style-type: none;
@@ -89,8 +91,8 @@ h2 {
 }
 
 .logo-img {
-  height: 100px;
-  width: 100px;
+  height: 50px;
+  width: 50px;
 }
 
 p {
@@ -111,14 +113,14 @@ p {
 
 .parentdiv {
   height: 100%;
-  padding: 10px;
   display: table;
 }
 
 .mapgrid {
-  width: 60%;
-  height: 75%;
+  position: relative;
   float: left;
+  width: 60%;
+  margin: 5px;
 }
 
 .griditem {
@@ -132,31 +134,84 @@ p {
 }
 
 .msgboard {
-  width: 35%;
-  height: 75%;
   float: right;
+  margin: 5px;
+  width: 35%;
   background: rgba(30, 130, 76, 0.5);
+}
+
+.animboard {
+  float: right;
+  margin: 5px;
+  width: 35%;
+  height: 62%;
+  background: gray;
+  opacity: 0.5;
 }
 
 #fly {
   height: 50px;
   width: 50px;
-  position:relative;
+  position: relative;
 }
 
-.plane-hide {
-  opacity: 0;
+#chair {
+  height: 50px;
+  width: 50px;
+  position: relative;
+  z-index: 2;
+  transform: translateX(-100%);
 }
 
 .plane-start {
   -webkit-animation-name: diagonal;
-  -webkit-animation-duration: 10s;
+  -webkit-animation-duration: 5s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease;
   -webkit-animation-fill-mode: forwards;
 }
 
+.chair-slide {
+  position: absolute;
+        z-index: 999;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+        top: 40%; /* Adjust this value to move the positioned div up and down */
+        background: rgba(0, 0, 0, 0.8);
+        font-family: Arial,sans-serif;
+        color: #fff;
+        width: 60%; /* Set the width of the positioned div */
+        animation: slides 5s linear 1;
+}
+
+#msg {
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+}
+
 /*all keyframes are here*/
+@keyframes slides {
+  from {left: 0px;}
+  to {left: 100%;}
+}
+
+@keyframes diagonal {
+    0%       { transform: translatex(-2000px) translatey(700px); opacity: 1}
+    50%      { transform: translatex(500px) translatey(100px); opacity: 1}
+    100%     { transform: translatex(1000px) translatey(0px); opacity: 0}
+}
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 200px);
+  }
+}
+
 @keyframes cursorAnim3 {
   0% {
     transform: scale(1);
@@ -186,17 +241,6 @@ p {
   to {
     transform: scale(.4);
   }
-}
-
-@keyframes mymove {
-  from {left: 0px;}
-  to {left: 100%;}
-}
-
-@keyframes diagonal {
-    0%       { transform: translatex(-2000px) translatey(700px); opacity: 1}
-    50%      { transform: translatex(50px) translatey(100px); opacity: 1}
-    100%     { transform: translatex(300px) translatey(0px); opacity: 0}
 }
 
 /* all media queries are here */
