@@ -137,7 +137,6 @@ p {
   float: right;
   margin: 5px;
   width: 35%;
-  background: rgba(30, 130, 76, 0.5);
 }
 
 .animboard {
@@ -145,8 +144,6 @@ p {
   margin: 5px;
   width: 35%;
   height: 62%;
-  background: gray;
-  opacity: 0.5;
 }
 
 #fly {
@@ -156,11 +153,15 @@ p {
 }
 
 #chair {
-  height: 50px;
-  width: 50px;
+  height: 200px;
+  width: 200px;
   position: relative;
-  z-index: 2;
-  transform: translateX(-100%);
+}
+
+#ship {
+  height: 200px;
+  width: 200px;
+  position: relative;
 }
 
 .plane-start {
@@ -171,31 +172,57 @@ p {
   -webkit-animation-fill-mode: forwards;
 }
 
-.chair-slide {
-  position: absolute;
-        z-index: 999;
-        margin: 0 auto;
-        left: 0;
-        right: 0;
-        text-align: center;
-        top: 40%; /* Adjust this value to move the positioned div up and down */
-        background: rgba(0, 0, 0, 0.8);
-        font-family: Arial,sans-serif;
-        color: #fff;
-        width: 60%; /* Set the width of the positioned div */
-        animation: slides 5s linear 1;
+.chair-slider {
+  top: 100px;
+  animation: marquee 5s linear forwards;
+}
+
+.ship-slider {
+  top: 100px;
+  animation: sail 5s linear forwards;
+  animation-delay: 4s;
+  opacity: 0;
 }
 
 #msg {
   font-weight: bold;
   font-size: 25px;
   text-align: center;
+  margin-top: 20%;
+}
+
+#lantern {
+  height: 50px;
+  width: 50px;
+}
+
+#momo {
+  margin-top: 100px;
+  height: 150px;
+  width: 150px;
+}
+
+.momo-start {
+  animation: circle 6s linear forwards;
+  animation-delay: 3s;
+  opacity: 0;
 }
 
 /*all keyframes are here*/
-@keyframes slides {
-  from {left: 0px;}
-  to {left: 100%;}
+@keyframes circle {
+  0% {transform: translatex(100px) rotate(-90deg);opacity:1}
+  30% {transform: translatey(100px) rotate(90deg);opacity:1}
+  50% {transform: translatex(100px) rotate(90deg);opacity:1}
+  80% {transform: translatey(100px) rotate(0deg);opacity:1}
+  100% {transform: translatex(100px) rotate(90deg);opacity:0}
+}
+
+@keyframes sail {
+  0% {transform: translatex(0) rotate(0deg);opacity:1}
+  30% {transform: rotate(20deg);left:10px;opacity:1}
+  50% {transform: rotate(0deg);left:60px;opacity:1}
+  80% {transform: rotate(-20deg);left:100px;opacity:1}
+  100% {transform: rotate(0deg);left:500px;opacity:0}
 }
 
 @keyframes diagonal {
@@ -205,10 +232,24 @@ p {
 }
 @keyframes marquee {
   0% {
-    transform: translate(0, 0);
+    transform: translate(-100px, 0);
+    opacity: 1;
+  }
+  25% {
+    transform: translate(50px, 0);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(100px, 0);
+    opacity: 1;
+  }
+  75% {
+    transform: translate(300px, 0);
+    opacity: 1;
   }
   100% {
-    transform: translate(0, 200px);
+    transform: translate(500px, 0);
+    opacity: 0;
   }
 }
 
