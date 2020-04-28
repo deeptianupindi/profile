@@ -17,7 +17,6 @@ function activateAsia() {
   animboard.style.backgroundRepeat = "repeat-x";
   animboard.style.backgroundPosition = "center top";
   msg.innerHTML = "Have a festive time in Asiatown..";
-  setTimeout(function() { animboard.style.backgroundImage = 'none' }, 3000);
   var momo = document.createElement('img');
   momo.src = "images/icons/momo.png";
   momo.id = 'momo';
@@ -49,4 +48,19 @@ function activateBeach() {
   animboard.append(ship);
   setInterval(function() { msg.innerHTML = "Or take a sail on waters of Lake Eerie!" }, 4000);
   setTimeout(function() { ship.parentNode.removeChild(chair) }, 6000);
+}
+
+function activateMargarita() {
+  animboard.style.backgroundImage = "url('images/icons/mexfood.png')";
+  animboard.style.backgroundSize = "200px 200px";
+  animboard.style.backgroundRepeat = "no-repeat";
+  animboard.style.backgroundPosition = "center center";
+  animboard.style.animation = "inner-circle 5s linear infinite";
+  msg.innerHTML = "Celebrate a special event here or just another beautiful day!";
+  var mex = document.createElement('img');
+  mex.src = "images/icons/margarita.png";
+  mex.id = 'mex';
+  mex.className = 'mex-start';
+  setTimeout(function() { msg.innerHTML = "Good music, great food and everything else in between."; animboard.append(mex) }, 3000);
+  setTimeout(function() { mex.parentNode.removeChild(mex) }, 10000);
 }
