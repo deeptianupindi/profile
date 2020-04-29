@@ -1,27 +1,37 @@
 var msg = document.getElementById('msg');
-var animboard = document.getElementsByClassName('animboard')[0];
-var parent = document.getElementsByClassName('parentdiv')[0];
+var msgboard = document.getElementsByClassName('msgboard')[0];
 
+function reset(){
+  while (msgboard.hasChildNodes()) {
+    msgboard.removeChild(msgboard.firstChild);
+  }
+}
 function activatePlane() {
+  //reset();
   var plane = document.createElement('img');
   plane.src = "images/plane.png";
   plane.id = 'fly';
   plane.className = 'plane-start';
-  parent.append(plane);
-  setTimeout(function() { plane.parentNode.removeChild(plane) }, 6000);
+  msgboard.append(plane);
+  //setTimeout(function() { plane.parentNode.removeChild(plane) }, 6000);
   msg.innerHTML = "Welcome to Cleveland!";
 }
 
 function activateAsia() {
-  animboard.style.backgroundImage = "url('images/icons/lantern.png')";
-  animboard.style.backgroundRepeat = "repeat-x";
-  animboard.style.backgroundPosition = "center top";
+  //reset();
   msg.innerHTML = "Have a festive time in Asiatown..";
+  var lantern = document.createElement('div');
+  lantern.id = "lantern";
+  lantern.style.backgroundImage = "url('images/icons/lantern.png')";
+  lantern.style.backgroundRepeat = "repeat-x";
+  lantern.style.backgroundPosition = "center top";
+  lantern.style.backgroundSize = "30px 30px";
+  msgboard.append(lantern);
   var momo = document.createElement('img');
   momo.src = "images/icons/momo.png";
   momo.id = 'momo';
   momo.className = 'momo-start';
-  animboard.append(momo);
+  msgboard.append(momo);
 
   var noodles = document.createElement('img');
   noodles.src = "images/icons/noodles.gif";
@@ -29,10 +39,11 @@ function activateAsia() {
   noodles.style.height = '150px';
   noodles.style.width = '150px';
   setTimeout(function() { msg.innerHTML = "Eat a variety hearty meal from momos to noodles, yummm!"; animboard.append(noodles) }, 3000);
-  setTimeout(function() { momo.parentNode.removeChild(momo); noodles.parentNode.removeChild(noodles) }, 10000);
+  setTimeout(function() { momo.parentNode.removeChild(momo); noodles.parentNode.removeChild(noodles); animboard.style.backgroundImage = "none" }, 10000);
 }
 
 function activateBeach() {
+  reset();
   var chair = document.createElement('img');
   chair.src = "images/icons/chair.png";
   chair.id = 'chair';
@@ -51,16 +62,19 @@ function activateBeach() {
 }
 
 function activateMargarita() {
-  animboard.style.backgroundImage = "url('images/icons/mexfood.png')";
-  animboard.style.backgroundSize = "200px 200px";
-  animboard.style.backgroundRepeat = "no-repeat";
-  animboard.style.backgroundPosition = "center center";
-  animboard.style.animation = "inner-circle 5s linear infinite";
+  reset();
   msg.innerHTML = "Celebrate a special event here or just another beautiful day!";
-  var mex = document.createElement('img');
-  mex.src = "images/icons/margarita.png";
-  mex.id = 'mex';
-  mex.className = 'mex-start';
-  setTimeout(function() { msg.innerHTML = "Good music, great food and everything else in between."; animboard.append(mex) }, 3000);
-  setTimeout(function() { mex.parentNode.removeChild(mex) }, 10000);
+  var mexdiv = document.createElement('div');
+  mexdiv.id = "mexdiv";
+  mexdiv.style.backgroundImage = "url('images/icons/mexfood.png')";
+  mexdiv.style.backgroundRepeat = "no-repeat";
+  mexdiv.style.backgroundPosition = "center center";
+  mexdiv.style.animation = "inner-circle 6s linear infinite";
+  animboard.append(mexdiv);
+  var marg = document.createElement('img');
+  marg.src = "images/icons/margarita.png";
+  marg.id = 'marg';
+  marg.className = 'marg-start';
+  setTimeout(function() { msg.innerHTML = "Good music, great food and everything else in between."; mexdiv.append(marg) }, 3000);
+  setTimeout(function() { marg.parentNode.removeChild(marg); mexdiv.parentNode.removeChild(mexdiv); animboard.style.backgroundImage = "none" }, 10000);
 }
