@@ -2,17 +2,13 @@ body {
   background-color: black;
   margin: 0;
   height: 100vh;
-  font-family: Poppins;
+  font-family: fantasy;
   cursor: none;
   background-image: url('images/paint.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-}
-
-#map {
-  height: 80%;
-  width: 80%;
+  overflow: hidden;
 }
 
 .cursor {
@@ -41,37 +37,6 @@ body {
   border: 1px solid red;
 }
 
-@keyframes cursorAnim {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(.7);
-  }
-}
-
-@keyframes cursorAnim2 {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(.4);
-  }
-}
-
-@keyframes cursorAnim3 {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(3);
-  }
-  100% {
-    transform: scale(1);
-    opacity: 0;
-  }
-}
-
 nav {
   display: flex;
   justify-content: space-between;
@@ -82,6 +47,7 @@ nav {
 }
 
 .nav-links {
+  font-size: 20px;
   display: flex;
   justify-content: space-between;
   list-style-type: none;
@@ -108,38 +74,14 @@ h2 {
   justify-content: center;
 }
 
-.demo-container {
-  padding: 0 100px 0 100px;
-  background: rgba(239, 183, 12, 0.3);
-}
-
-.demo-item {
-  width: 300px;
-  padding: 20px;
-  text-align: center;
-}
-
 .home-link a {
   text-decoration: none;
   color: white;
 }
 
 .logo-img {
-  height: 100px;
-  width: 100px;
-}
-
-.car-img {
-  height: 100px;
-  width: 100px;
-  position: relative;
-  /*animation: mymove 10s;
-  animation-timing-function: linear;*/
-}
-
-@keyframes mymove {
-  from {left: 0px;}
-  to {left: 100%;}
+  height: 50px;
+  width: 50px;
 }
 
 p {
@@ -149,13 +91,184 @@ p {
   justify-content: center;
 }
 
-#canvas {
-   width: 80%;
-   text-align:center;
-   display: inline;
-   margin: 10px 160px 10px 160px;
+.parentdiv {
+  height: 100%;
+  position: relative;
 }
 
+.mapgrid {
+  width: 70%;
+  height: 70%;
+  margin: 10px auto;
+}
+
+.griditem {
+  width: 33%;
+  height: 33%;
+  display: inline-table;
+  margin-top: -5px;
+}
+
+.griditem:active {
+  transform: translateY(4px);
+}
+
+.msgboard {
+  margin: 10px auto;
+  height: 25%;
+}
+
+.plane-start {
+  animation: diagonal;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+.chair-slider {
+  top: 100px;
+}
+
+.ship-slider {
+  top: 100px;
+  animation-delay: 4s;
+  opacity: 0;
+}
+
+.marg-start {
+  animation: circle 6s linear infinite;
+}
+
+#msg {
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+}
+
+#momo {
+  height: 70px;
+  width: 70px;
+  margin: 10px auto;
+  animation: rotate 5s linear forwards;
+}
+
+#fly {
+  height: 50px;
+  width: 50px;
+  position: relative;
+}
+
+#chair {
+  height: 100px;
+  width: 100px;
+  margin: 10px auto;
+  animation: marquee 5s linear forwards;
+}
+
+#ship {
+  height: 100px;
+  width: 100px;
+  margin: 10px auto;
+  animation: sail 5s linear forwards;
+  opacity: 0;
+}
+
+#noodles {
+  height: 70px;
+  width: 70px;
+  display: block;
+  margin: 10px auto;
+}
+
+#lantern {
+  background-image: url('images/icons/lantern.png');
+  background-repeat: repeat-x;
+  background-position: center top;
+  background-size: 30px 30px;
+}
+
+#mexdiv {
+  margin-top: 100px;
+}
+
+#marg {
+  height: 100px;
+  width: 100px;
+}
+
+/*all keyframes are here*/
+@keyframes circle {
+    from { transform:rotate(0deg); }
+    to { transform:rotate(360deg); }
+}
+
+@keyframes inner-circle {
+    from { transform:rotate(0deg); }
+    to { transform:rotate(-360deg); }
+}
+
+@keyframes rotate {
+  0% {transform: translatex(10px) rotate(-90deg);opacity:1}
+  30% {transform: translatex(100px) rotate(90deg);opacity:1}
+  50% {transform: translatex(150px) rotate(90deg);opacity:1}
+  80% {transform: translatex(200px) rotate(90deg);opacity:1}
+  100% {transform: translatex(300px) rotate(0);opacity:0}
+}
+
+@keyframes sail {
+  0% {transform: translatex(0) rotate(0deg);opacity:1}
+  30% {transform: rotate(20deg);left:10px;opacity:1}
+  50% {transform: rotate(0deg);left:60px;opacity:1}
+  80% {transform: rotate(-20deg);left:100px;opacity:1}
+  100% {transform: rotate(0deg);left:500px;opacity:0}
+}
+
+@keyframes diagonal {
+    0% { transform: translatex(-100px) translatey(-100px); opacity: 1}
+    50% { transform: translatex(500px) translatey(-300px); opacity: 1}
+    100% { transform: translatex(1000px) translatey(-500px); opacity: 0}
+}
+@keyframes marquee {
+  0% { transform: translatex(10px); opacity: 1 }
+  25% { transform: translatex(100px); opacity: 1 }
+  50% { transform: translatex(500px); opacity: 1 }
+  75% { transform: translatex(800px); opacity: 1 }
+  100% { transform: translatex(1000px); opacity: 0 }
+
+@keyframes cursorAnim3 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(3);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes cursorAnim {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(.7);
+  }
+}
+
+@keyframes cursorAnim2 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(.4);
+  }
+}
+
+/* all media queries are here */
 @media only screen and (max-device-width: 736px) {
   .logo-img {
     height: 250px;
@@ -174,8 +287,9 @@ p {
     font-size: 30px;
   }
 
-  .demo-item {
+  .mapgrid {
     width: 100%;
+    height: 40%;
   }
 
 }
