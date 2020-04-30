@@ -98,7 +98,7 @@ p {
 
 .mapgrid {
   width: 70%;
-  height: 60%;
+  height: 70%;
   margin: 10px auto;
 }
 
@@ -106,6 +106,7 @@ p {
   width: 33%;
   height: 33%;
   display: inline-table;
+  margin-top: -5px;
 }
 
 .griditem:active {
@@ -114,45 +115,29 @@ p {
 
 .msgboard {
   margin: 10px auto;
-  height: 10%;
-}
-
-#fly {
-  height: 50px;
-  width: 50px;
-  position: relative;
-}
-
-#chair {
-  height: 200px;
-  width: 200px;
-  position: relative;
-}
-
-#ship {
-  height: 200px;
-  width: 200px;
-  position: relative;
+  height: 25%;
 }
 
 .plane-start {
-  -webkit-animation-name: diagonal;
-  -webkit-animation-duration: 5s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease;
-  -webkit-animation-fill-mode: forwards;
+  animation: diagonal;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
 }
 
 .chair-slider {
   top: 100px;
-  animation: marquee 5s linear forwards;
 }
 
 .ship-slider {
   top: 100px;
-  animation: sail 5s linear forwards;
   animation-delay: 4s;
   opacity: 0;
+}
+
+.marg-start {
+  animation: circle 6s linear infinite;
 }
 
 #msg {
@@ -163,15 +148,45 @@ p {
 }
 
 #momo {
-  margin-top: 100px;
-  height: 150px;
-  width: 150px;
+  height: 70px;
+  width: 70px;
+  margin: 10px auto;
+  animation: rotate 5s linear forwards;
 }
 
-.momo-start {
-  animation: rotate 6s linear forwards;
-  animation-delay: 3s;
+#fly {
+  height: 50px;
+  width: 50px;
+  position: relative;
+}
+
+#chair {
+  height: 100px;
+  width: 100px;
+  margin: 10px auto;
+  animation: marquee 5s linear forwards;
+}
+
+#ship {
+  height: 100px;
+  width: 100px;
+  margin: 10px auto;
+  animation: sail 5s linear forwards;
   opacity: 0;
+}
+
+#noodles {
+  height: 70px;
+  width: 70px;
+  display: block;
+  margin: 10px auto;
+}
+
+#lantern {
+  background-image: url('images/icons/lantern.png');
+  background-repeat: repeat-x;
+  background-position: center top;
+  background-size: 30px 30px;
 }
 
 #mexdiv {
@@ -181,10 +196,6 @@ p {
 #marg {
   height: 100px;
   width: 100px;
-}
-
-.marg-start {
-  animation: circle 6s linear infinite;
 }
 
 /*all keyframes are here*/
@@ -199,11 +210,11 @@ p {
 }
 
 @keyframes rotate {
-  0% {transform: translatex(100px) rotate(-90deg);opacity:1}
-  30% {transform: translatey(100px) rotate(0deg);opacity:1}
-  50% {transform: translatex(100px) rotate(90deg);opacity:1}
-  80% {transform: translatey(100px) rotate(0deg);opacity:1}
-  100% {transform: translatex(100px) rotate(-90deg);opacity:0}
+  0% {transform: translatex(10px) rotate(-90deg);opacity:1}
+  30% {transform: translatex(100px) rotate(90deg);opacity:1}
+  50% {transform: translatex(150px) rotate(90deg);opacity:1}
+  80% {transform: translatex(200px) rotate(90deg);opacity:1}
+  100% {transform: translatex(300px) rotate(0);opacity:0}
 }
 
 @keyframes sail {
@@ -215,32 +226,16 @@ p {
 }
 
 @keyframes diagonal {
-    0%       { transform: translatex(-2000px) translatey(800px); opacity: 1}
-    50%      { transform: translatex(800px) translatey(200px); opacity: 1}
-    100%     { transform: translatex(1200px) translatey(0); opacity: 0}
+    0% { transform: translatex(-100px) translatey(-100px); opacity: 1}
+    50% { transform: translatex(500px) translatey(-300px); opacity: 1}
+    100% { transform: translatex(1000px) translatey(-500px); opacity: 0}
 }
 @keyframes marquee {
-  0% {
-    transform: translate(-100px, 0);
-    opacity: 1;
-  }
-  25% {
-    transform: translate(50px, 0);
-    opacity: 1;
-  }
-  50% {
-    transform: translate(100px, 0);
-    opacity: 1;
-  }
-  75% {
-    transform: translate(300px, 0);
-    opacity: 1;
-  }
-  100% {
-    transform: translate(500px, 0);
-    opacity: 0;
-  }
-}
+  0% { transform: translatex(10px); opacity: 1 }
+  25% { transform: translatex(100px); opacity: 1 }
+  50% { transform: translatex(500px); opacity: 1 }
+  75% { transform: translatex(800px); opacity: 1 }
+  100% { transform: translatex(1000px); opacity: 0 }
 
 @keyframes cursorAnim3 {
   0% {
