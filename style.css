@@ -11,6 +11,17 @@ body {
   overflow: hidden;
 }
 
+.demo-container {
+  padding: 100px;
+}
+
+.demo-item {
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  display: inline-block;
+}
+
 .cursor {
   width: 20px;
   height: 20px;
