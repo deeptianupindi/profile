@@ -12,12 +12,12 @@ body {
 }
 
 .demo-container {
-  padding: 100px;
+  padding: 50px;
 }
 
 .demo-item {
   width: 300px;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
   display: inline-block;
 }
