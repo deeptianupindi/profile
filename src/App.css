@@ -1,0 +1,37 @@
+.App {
+  background-color: #282c34;
+  font-size: calc(5px + 2vmin);
+  color: white;
+  height: 100vh;
+  background-image: url("images/wood.png");
+  background-size: cover;
+}
+
+.App .jumbotron {
+  background-color: black;
+  opacity: 0.75;
+}
+
+.nav-item {
+  margin-right: 50px;
+}
+
+#navbar {
+  margin-top: -100px;
+  float: right;
+}
+
+#banner {
+  margin-top: 20px;
+}
+
+.demo-container {
+  padding: 50px;
+}
+
+.demo-item {
+  width: 300px;
+  padding: 10px;
+  text-align: center;
+  display: inline-block;
+}
