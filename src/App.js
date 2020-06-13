@@ -8,7 +8,7 @@ import Projects from './Projects.js';
 import About from './About.js';
 import Profile from './Profile.js';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
   Link
