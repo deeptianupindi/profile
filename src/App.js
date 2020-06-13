@@ -15,19 +15,24 @@ import {
 } from "react-router-dom";
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {heading: "Oh, hello..", subheading: "Nice of you to stop by, welcome!"};
+  }
+
   render() {
     return (
       <Router>
         <div className="App">
           <Jumbotron>
-            <h1 id="heading">Oh, hello!</h1>
+            <h1 id="heading">{this.state.heading}</h1>
             <p id="banner">
-              Looks like you've landed here, welcome!
+              {this.state.subheading}
             </p>
             <Navbar id="navbar" bg="dark" variant="dark">
-              <Nav defaultActiveKey="/home">
+              <Nav defaultActiveKey="/">
                 <Nav.Item>
-                  <Link to="/about">About</Link>
+                  <Link to="/">About</Link>
                 </Nav.Item>
                 <Nav.Item>
                   <Link to="/projects">Projects</Link>
