@@ -98,3 +98,29 @@ i {
 .badge {
   margin: 5px;
 }
+
+.sfly-project {
+  width: 100vh;
+  height: 50vh;
+}
+
+.carousel {
+  background-color: black;
+}
+
+.carousel-caption {
+  top: 20px;
+}
+
+#mphs-body {
+  overflow: visible;
+}
+
+.project-header {
+  text-align: center;
+}
+
+.project-listgroup {
+  margin-top: 20px;
+  text-align: left;
+}
