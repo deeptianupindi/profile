@@ -2,6 +2,7 @@ import React from 'react';
 import Container from 'react-bootstrap/container';
 import Row from 'react-bootstrap/row';
 import Col from 'react-bootstrap/col';
+import './App.css';
 
 class Projects extends React.Component {
 

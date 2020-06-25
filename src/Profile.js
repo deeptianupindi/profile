@@ -7,6 +7,7 @@ import Tab from 'react-bootstrap/tab';
 import Badge from 'react-bootstrap/badge';
 import ListGroup from 'react-bootstrap/listgroup';
 import Carousel from 'react-bootstrap/carousel';
+import './App.css';
 
 class Profile extends React.Component {
 
