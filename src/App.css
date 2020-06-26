@@ -100,8 +100,8 @@ i {
 }
 
 .sfly-project {
-  width: 100vh;
-  height: 50vh;
+  width: 100%;
+  height: 55vh;
 }
 
 .carousel {
@@ -110,6 +110,10 @@ i {
 
 .carousel-caption {
   top: 20px;
+}
+
+.carousel-item {
+  position: initial !important;
 }
 
 #mphs-body {
