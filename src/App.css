@@ -44,6 +44,7 @@
 .card-body {
   background-color: rgb(0,0,0,.3) !important;
   color: black;
+  padding: 0;
 }
 
 .list-group-item.active {
@@ -101,7 +102,7 @@ i {
 
 .sfly-project {
   width: 100%;
-  height: 55vh;
+  height: 60vh;
 }
 
 .carousel {
@@ -116,6 +117,10 @@ i {
   position: initial !important;
 }
 
+ol.carousel-indicators {
+  position: inherit;
+}
+
 #mphs-body {
   overflow: visible;
 }
@@ -127,4 +132,38 @@ i {
 .project-listgroup {
   margin-top: 20px;
   text-align: left;
+}
+
+@media (max-width: 767px) {
+  .navbar-nav {
+    flex-direction: column !important;
+  }
+
+  .nav-item {
+    margin-right: 0;
+  }
+
+  #navbar {
+    height: 70px;
+  }
+
+  .desc .row {
+    display: block;
+  }
+
+  .desc .container {
+    background: black;
+  }
+
+  #profile-accordion .row {
+    display: grid;
+  }
+
+  a {
+    font-size: 16px;
+  }
+
+  #sfly, #usair, #ics, #mphs {
+    margin-left: 25%;
+  }
 }

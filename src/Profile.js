@@ -65,10 +65,10 @@ class Profile extends React.Component {
                       <h3>Photosbooks, Calendars & Prints apps</h3>
                       <ul className="project-listgroup">
                         <li>Worked on Photobooks & Calendars products using AngularJS frontend and NodeJS backend platform as a service</li>
-                        <li>Manual, automation and performance tests for end-end product flow including post-app print testing</li>
                         <li>Developed and tested Prints webapp using Bootstrap components and Javascript</li>
                         <li>Worked closely with external stakeholders/developers and internal product team to develop the Make-my-book webapp that lets users upload photos for third-party designers to create their photobooks</li>
                         <li>Unit tested using Jasmine tests</li>
+                        <li>Manual, automation and performance tests for end-end product with post-order print testing</li>
                       </ul>
                     </Carousel.Caption>
                   </Carousel.Item>
@@ -156,7 +156,7 @@ class Profile extends React.Component {
             <Accordion.Collapse eventKey="1">
               <Card.Body>
                 <h3 className="project-header">Projects worked at US Airways(now American Airlines)</h3>
-                <Carousel interval="50000">
+                <Carousel interval="50000" indicators='false'>
                   <Carousel.Item className="sfly-project">
                     <Carousel.Caption>
                       <h3>Choice Seats Testing and Automation</h3>

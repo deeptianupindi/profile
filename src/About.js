@@ -5,9 +5,9 @@ class About extends React.Component {
 
   render() {
     return (
-      <canvas>
-
-      </canvas>
+      <div>
+        <h4>To-do: write something about me</h4>
+      </div>
     );
   }
 }

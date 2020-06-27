@@ -32,26 +32,29 @@ class App extends React.Component {
             <Navbar id="navbar" bg="dark" variant="dark">
               <Nav defaultActiveKey="/">
                 <Nav.Item>
-                  <Link to="/">About</Link>
-                </Nav.Item>
-                <Nav.Item>
-                  <Link to="/projects">Projects</Link>
+                  <Link to="/about">About</Link>
                 </Nav.Item>
                 <Nav.Item>
                   <Link to="/profile">Profile</Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Link to="/projects">Projects</Link>
                 </Nav.Item>
               </Nav>
             </Navbar>
           </Jumbotron>
           <Switch>
-            <Route path="/about">
-              <About />
+            <Route exact path="/">
+              <Profile />
             </Route>
-            <Route path="/projects">
+            <Route exact path="/profile">
+              <Profile />
+            </Route>
+            <Route exact path="/projects">
               <Projects />
             </Route>
-            <Route path="/profile">
-              <Profile />
+            <Route exact path="/about">
+              <About />
             </Route>
           </Switch>
         </div>
