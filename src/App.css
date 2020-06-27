@@ -166,4 +166,20 @@ ol.carousel-indicators {
   #sfly, #usair, #ics, #mphs {
     margin-left: 25%;
   }
+
+  #heading {
+    font-size: 1.5rem;
+  }
+
+  #banner {
+    display: table-cell;
+  }
+
+  .card-body {
+    padding: 0;
+  }
+
+  .sfly-project {
+    height: 100vh;
+  }
 }
