@@ -17,7 +17,7 @@ import {
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {heading: "Oh, hello..", subheading: "Nice of you to stop by, welcome!"};
+    this.state = {heading: "Deepti Anupindi", subheading: "Frontend Developer | Fullstack Engineer | Enthusiast for Creativity"};
   }
 
   render() {
