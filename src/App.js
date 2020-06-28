@@ -32,9 +32,6 @@ class App extends React.Component {
             <Navbar id="navbar" bg="dark" variant="dark">
               <Nav defaultActiveKey="/">
                 <Nav.Item>
-                  <Link to="/about">About</Link>
-                </Nav.Item>
-                <Nav.Item>
                   <Link to="/profile">Profile</Link>
                 </Nav.Item>
                 <Nav.Item>
@@ -52,9 +49,6 @@ class App extends React.Component {
             </Route>
             <Route exact path="/projects">
               <Projects />
-            </Route>
-            <Route exact path="/about">
-              <About />
             </Route>
           </Switch>
         </div>
