@@ -64,7 +64,7 @@ class Profile extends React.Component {
                     <Carousel.Caption>
                       <h3>Photosbooks, Calendars & Prints apps</h3>
                       <ul className="project-listgroup">
-                        <li>Worked on Photobooks & Calendars products using AngularJS frontend and NodeJS backend platform as a service</li>
+                        <li>Worked on Photobooks & Calendars products using AngularJS frontend, NodeJS backend and Java services</li>
                         <li>Developed and tested Prints webapp using Bootstrap components and Javascript</li>
                         <li>Worked closely with external stakeholders/developers and internal product team to develop the Make-my-book webapp that lets users upload photos for third-party designers to create their photobooks</li>
                         <li>Unit tested using Jasmine tests</li>
@@ -76,7 +76,7 @@ class Profile extends React.Component {
                     <Carousel.Caption>
                       <h3>Universal Text Editor</h3>
                       <ul className="project-listgroup">
-                        <li>Worked on a ReactJS reusable integratable text-editor widget that allows users to customize text font, size, alignment and placement</li>
+                        <li>Worked on a ReactJS reusable & installable text-editor widget that allows users to customize text font, size, alignment and placement</li>
                         <li>Developed as a standalone app that was consumed by different teams/projects across Shutterfly via npm installation</li>
                         <li>Configurable params like enabling/disabling customizable components as needed for each product in Shutterfly</li>
                         <li>CI/CD using Jenkins</li>
@@ -97,7 +97,7 @@ class Profile extends React.Component {
                     <Carousel.Caption>
                       <h3>Cards, Stationary, Photogifts & Home-decor apps</h3>
                       <ul className="project-listgroup">
-                        <li>Worked on Photogifts products that include Cards, Stationary, homedecor, gifts etc originally using Backbone and later with ReactJS</li>
+                        <li>Worked on Photogifts products that include Cards, Stationary, homedecor, gifts etc with ReactJS frontend and Java backend</li>
                         <li>Deployed code to pre-prod and production environments using Canary builds</li>
                         <li>Regularly worked with A/B testing team to push new features out to production for user testing</li>
                         <li>Experience working within remote teams across timezones</li>
