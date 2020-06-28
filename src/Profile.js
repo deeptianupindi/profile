@@ -199,7 +199,7 @@ class Profile extends React.Component {
                   <i className="location">Rockville, Maryland</i>
                 </Col>
                 <Col>
-                  <h4>Software Developer</h4>
+                  <h4>Software Engineer</h4>
                   <i>February 2010 - August 2011</i>
                 </Col>
                 <Col>
@@ -247,7 +247,7 @@ class Profile extends React.Component {
                   <i className="location">Bangalore, India</i>
                 </Col>
                 <Col>
-                  <h4>Software Developer</h4>
+                  <h4>Software Engineer</h4>
                   <i>July 2006 - December 2007</i>
                 </Col>
                 <Col>
