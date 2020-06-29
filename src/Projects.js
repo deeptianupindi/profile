@@ -27,6 +27,14 @@ class Projects extends React.Component {
                 <iframe title="count" width="275px" height="170px" src="https://www.youtube.com/embed/B4VIgK9ylAk" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
               </div>
             </Col>
+            <Col>
+              <div className="demo-item">
+                <h3>Nav-tracker</h3>
+                <p>Dynamically displays personalized list of stock prices with ability to send data to a backend.</p>
+                <p><a href="https://github.com/deepictorial/navtracker">https://github.com/deepictorial/navtracker</a></p>
+                <iframe title="nav" width="275px" height="170px" src="https://www.youtube.com/embed/fYTnr69g0yo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </Col>
           </Row>
         </Container>
       </div>
