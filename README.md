@@ -1,3 +1,3 @@
 # Deepti Anupindi's portfolio
 
-navigate to my site => [http://www.deeptianupindi.github.io/](http://www.deeptianupindi.github.io/)
+navigate to my site => [http://www.deeptianupindi.github.io/profile](http://www.deeptianupindi.github.io/profile)
