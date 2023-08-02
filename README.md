@@ -1,3 +1,3 @@
-# deepictorial's portfolio
+# Deepti Anupindi's portfolio
 
-navigate to my site => [http://www.deepictorial.be/](http://www.deepictorial.be/)
+navigate to my site => [http://www.deeptianupindi.github.io/](http://www.deeptianupindi.github.io/)
