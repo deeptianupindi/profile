@@ -24,7 +24,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "homepage": "http://www.deepictorial.github.io/",
+  "homepage": "http://www.deeptianupindi.github.io/",
   "browserslist": {
     "production": [
       ">0.2%",
