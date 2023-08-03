@@ -24,7 +24,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "homepage": "http://deeptianupindi.github.io/profile",
+  "homepage": "http://deeptianupindi.github.io/",
   "browserslist": {
     "production": [
       ">0.2%",
